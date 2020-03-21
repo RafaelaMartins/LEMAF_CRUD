@@ -117,6 +117,7 @@ public class CadCargos extends javax.swing.JFrame {
     private void bttCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttCadastrarActionPerformed
         ControllerCargos cargos = new ControllerCargos();
         cargos.insert(cadNome.getText());
+        cadNome.setText("");
         
     }//GEN-LAST:event_bttCadastrarActionPerformed
 

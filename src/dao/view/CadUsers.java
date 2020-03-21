@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFormattedTextField;
+import javax.swing.JOptionPane;
 import javax.swing.text.MaskFormatter;
 
 /**
@@ -47,6 +48,14 @@ public class CadUsers extends javax.swing.JFrame {
             
         }
      
+    }
+    
+    public void reboot(){
+        txtName.setText("");
+        txtCPF.setText("");
+        txtDate.setText("yyy-MM-dd");
+        
+        
     }
 
     /**
@@ -91,6 +100,7 @@ public class CadUsers extends javax.swing.JFrame {
 
         jLabel6.setText("Sexo:");
 
+        bttCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dao/view/image/Knob Add.png"))); // NOI18N
         bttCadastrar.setText("Cadastrar");
         bttCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +108,7 @@ public class CadUsers extends javax.swing.JFrame {
             }
         });
 
+        bttLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dao/view/image/Knob Refresh.png"))); // NOI18N
         bttLimpar.setText("Limpar");
         bttLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +116,7 @@ public class CadUsers extends javax.swing.JFrame {
             }
         });
 
+        bttSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dao/view/image/Knob Cancel.png"))); // NOI18N
         bttSair.setText("Sair");
         bttSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,7 +195,7 @@ public class CadUsers extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bttCadastrar)
                     .addComponent(bttLimpar)
@@ -207,12 +219,15 @@ public class CadUsers extends javax.swing.JFrame {
         
         
        
-
-        String cargos = (String) cbxCargos.getSelectedItem();
-        
-        ControllerUsers user = new ControllerUsers();
-        user.Insert(txtName.getText(), txtCPF.getText(), txtDate.getText(), gender,cargos);
-        
+         if(ControllerUsers.isCPF(txtCPF.getText())){
+            String cargos = (String) cbxCargos.getSelectedItem();
+            ControllerUsers user = new ControllerUsers();
+            user.Insert(txtName.getText(), txtCPF.getText(), txtDate.getText(), gender,cargos);
+            reboot();
+        }else{
+        JOptionPane.showMessageDialog (null, "CPF INVÁLIDO!");
+        reboot();
+        }
     }//GEN-LAST:event_bttCadastrarActionPerformed
 
     private void bttLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttLimparActionPerformed

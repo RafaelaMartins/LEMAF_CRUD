@@ -8,6 +8,7 @@ package dao.view;
 import dao.controller.ControllerCargos;
 import dao.controller.ControllerUsers;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -105,6 +106,7 @@ public class UpdateUsers extends javax.swing.JFrame {
             }
         });
 
+        bttExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dao/view/image/Knob Cancel.png"))); // NOI18N
         bttExit.setText("Sair");
         bttExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,7 +184,7 @@ public class UpdateUsers extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bttEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bttExit))
+                    .addComponent(bttExit, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22))
         );
 
@@ -204,8 +206,12 @@ public class UpdateUsers extends javax.swing.JFrame {
         }else{
             gender = 'I';
         }
-        users.edit(ShowUsers.select.getId(), txtName.getText(), txtCPF.getText(),txtBorn.getText(),gender, cbxCargos.getSelectedItem().toString(), ShowUsers.select.getDate_origin());
-                
+        if(ControllerUsers.isCPF(txtCPF.getText())){
+            users.edit(ShowUsers.select.getId(), txtName.getText(), txtCPF.getText(),txtBorn.getText(),gender, cbxCargos.getSelectedItem().toString(), ShowUsers.select.getDate_origin());
+        }
+        else{
+            JOptionPane.showMessageDialog (null, "CPF INVÁLIDO!");    
+        }
     }//GEN-LAST:event_bttEditActionPerformed
 
     private void bttExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttExitActionPerformed

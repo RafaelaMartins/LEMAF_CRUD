@@ -17,7 +17,7 @@ public class CreateTableCargos {
         
         createTable ="CREATE TABLE cargosUsers.cargos ("
                         + "CID INT NOT NULL AUTO_INCREMENT,"
-                        + "NAME VARCHAR(45) NOT NULL,"
+                        + "NAME VARCHAR(45) NOT NULL UNIQUE,"
                         + "PRIMARY KEY (CID))";
         Conexao create = new Conexao();
         Conexao.CreateTable(createTable);

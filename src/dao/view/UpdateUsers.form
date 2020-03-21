@@ -115,7 +115,7 @@
               <EmptySpace pref="59" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="bttEdit" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
-                  <Component id="bttExit" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bttExit" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
           </Group>
@@ -212,6 +212,9 @@
     </Component>
     <Component class="javax.swing.JToggleButton" name="bttExit">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/dao/view/image/Knob Cancel.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Sair"/>
       </Properties>
       <Events>

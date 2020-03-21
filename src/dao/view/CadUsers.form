@@ -109,7 +109,7 @@
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtDate" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="59" max="32767" attributes="0"/>
+              <EmptySpace pref="42" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="bttCadastrar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="bttLimpar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -186,6 +186,9 @@
     </Component>
     <Component class="javax.swing.JToggleButton" name="bttCadastrar">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/dao/view/image/Knob Add.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
       </Properties>
       <Events>
@@ -194,6 +197,9 @@
     </Component>
     <Component class="javax.swing.JToggleButton" name="bttLimpar">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/dao/view/image/Knob Refresh.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Limpar"/>
       </Properties>
       <Events>
@@ -202,6 +208,9 @@
     </Component>
     <Component class="javax.swing.JToggleButton" name="bttSair">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/dao/view/image/Knob Cancel.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Sair"/>
       </Properties>
       <Events>

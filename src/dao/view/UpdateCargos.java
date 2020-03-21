@@ -109,6 +109,7 @@ public class UpdateCargos extends javax.swing.JFrame {
     private void bttEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttEditActionPerformed
         ControllerCargos edit = new ControllerCargos();
         edit.update(txtName.getText(), ShowCargos.id);
+        txtName.setName("");
         
     }//GEN-LAST:event_bttEditActionPerformed
 

@@ -132,6 +132,7 @@ public class ModelUsers {
     public void insert(String name, String cpf, String date, char gender,String cargo, String now){
         
      try{
+         
       // create a mysql database connection
       String myDriver = "com.mysql.jdbc.Driver";
       String myUrl = "jdbc:mysql://localhost:3306/cargosUsers";
@@ -139,25 +140,26 @@ public class ModelUsers {
       Connection conn = DriverManager.getConnection(myUrl, "root", "root");
       Statement st = conn.createStatement();
       Statement code = conn.createStatement();
-      String query ="SELECT MAX(UID) AS 'UID' FROM usuarios;";
+      String query ="SELECT MAX(UID) AS 'UID' FROM cargosUsers.usuarios;";
       ResultSet id = code.executeQuery(query);
+      
       int userID = 0;
+      
       while(id.next()){
-        System.out.println(id.getString("UID"));
         String uid = id.getString("UID");
         userID = Integer.parseInt(uid);
-        userID = userID+1;
-        
       }
+      userID = userID+1;
       String uID = Integer.toString(userID); 
       String mysqlDateNow = now.toString();
       String mysqlDate = date;
       
       st.executeUpdate("INSERT INTO cargosUsers.usuarios (UID,NAME,CPF,DATEBORN,GENDER,CARGO,UPDATE_CONTROL) "
           +"VALUES ('"+uID+"','"+name+"','"+cpf+"','"+mysqlDate+"','"+gender+"','"+cargo+"','"+mysqlDateNow+"');");
-      JOptionPane.showMessageDialog (null, "Registro inserido com sucesso!");
-      conn.close();
       
+      conn.close();
+      System.out.println(uID+","+name+","+cpf+","+mysqlDate+","+gender+","+cargo+","+mysqlDateNow);
+      JOptionPane.showMessageDialog (null, "Registro inserido com sucesso!");
     }
     catch (Exception e)
     {

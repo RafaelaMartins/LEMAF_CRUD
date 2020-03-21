@@ -9,6 +9,7 @@ import dao.controller.ControllerCargos;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
@@ -164,11 +165,17 @@ public class ShowCargos extends javax.swing.JFrame {
     private void txtDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDeleteActionPerformed
         int row = 0;
         if (tblCargos.getSelectedRow()>= row){
-            this.value = tblCargos.getModel().getValueAt(row, 0).toString();
+            this.value = tblCargos.getModel().getValueAt(tblCargos.getSelectedRow(), 0).toString();
+            
             ControllerCargos cargo = new ControllerCargos();
-            cargo.delete(cargo.selectCode(value));
-        }
-        reboot();
+            System.out.println(tblCargos.getSelectedRow());
+            System.out.println("LINHA:"+this.value);
+            System.out.println("ID:"+cargo.selectCode(this.value));
+            cargo.delete(cargo.selectCode(this.value));
+            reboot();
+        }else{
+                JOptionPane.showMessageDialog (null, "SELECIONE UM CAMPO");    
+            }
     }//GEN-LAST:event_txtDeleteActionPerformed
 
     private void txtExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtExitActionPerformed

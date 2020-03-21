@@ -143,19 +143,20 @@ public class ModelUsers {
       String query ="SELECT MAX(UID) AS 'UID' FROM cargosUsers.usuarios;";
       ResultSet id = code.executeQuery(query);
       
-      int userID = 0;
+      int userID = 1;
       
       while(id.next()){
         String uid = id.getString("UID");
         userID = Integer.parseInt(uid);
+        userID = userID+1;
       }
-      userID = userID+1;
+      
       String uID = Integer.toString(userID); 
       String mysqlDateNow = now.toString();
       String mysqlDate = date;
       
-      st.executeUpdate("INSERT INTO cargosUsers.usuarios (UID,NAME,CPF,DATEBORN,GENDER,CARGO,UPDATE_CONTROL) "
-          +"VALUES ('"+uID+"','"+name+"','"+cpf+"','"+mysqlDate+"','"+gender+"','"+cargo+"','"+mysqlDateNow+"');");
+      st.executeUpdate("INSERT INTO cargosUsers.usuarios (NAME,CPF,DATEBORN,GENDER,CARGO,UPDATE_CONTROL) "
+          +"VALUES ('"+name+"','"+cpf+"','"+mysqlDate+"','"+gender+"','"+cargo+"','"+mysqlDateNow+"');");
       
       conn.close();
       System.out.println(uID+","+name+","+cpf+","+mysqlDate+","+gender+","+cargo+","+mysqlDateNow);

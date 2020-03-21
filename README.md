@@ -107,31 +107,31 @@ Resultado da Exclusão do Cargo:
 ![Código de criação da tabela Cargos](cargo_delete3.png)
 
 Cadastro de Usuários:
-![Código de criação da tabela Cargos](usuarios_1.png)
+![Código de criação da tabela Cargos](usuario_1.png)
 
 Cadastro de Usuário Validação de CPF:
-![Código de criação da tabela Cargos](usuarios_cpf.png)
+![Código de criação da tabela Cargos](usuario_cpf.png)
 
 Cadastro de Usuário Confirmação:
-![Código de criação da tabela Cargos](usuarios_confirma.png)
+![Código de criação da tabela Cargos](usuario_confirma.png)
 
 View com lista de Usuários Cadastrados:
-![Código de criação da tabela Cargos](usuarios_view.png)
+![Código de criação da tabela Cargos](usuario_view.png)
 
 Edição de Usuarios:
-![Código de criação da tabela Cargos](usuarios_edit.png)
+![Código de criação da tabela Cargos](usuario_edit.png)
 
 Edição de Usuarios Confirmada:
-![Código de criação da tabela Cargos](usuarios_edit2.png)
+![Código de criação da tabela Cargos](usuario_edit2.png)
 
 Resultado da edição de Usuários:
-![Código de criação da tabela Cargos](usuarios_edit3.png)
+![Código de criação da tabela Cargos](usuario_edit3.png)
 
 Exclusão de Usuários:
-![Código de criação da tabela Cargos](usuarios_delete.png)
+![Código de criação da tabela Cargos](usuario_delete.png)
 
 Resultado da Exclusão do Usuário:
-![Código de criação da tabela Cargos](usuarios_delete2.png)
+![Código de criação da tabela Cargos](usuario_delete2.png)
 
 
 

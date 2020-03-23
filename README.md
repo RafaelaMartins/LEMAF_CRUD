@@ -14,12 +14,12 @@ Este trabalho foi desenvolvido utilizando a linguagem de programação Java.
 A conexão com o banco de dados foi feita utilizando um componente chamado
 JDBC + MySQL. Na parte gráfica utilizou-se o JFrame. Os métodos implementados
 são os métodos básicos de um CRUD (C-CREATE,R-READ,U-UPDATE,D-DELETE).
-    - ***Netbens 8.1***
-    - ***MySQL Connector Java 5.1.38***
-    - ***Mysql  Ver 14.14 Distrib 5.7.27***
-    - ***Openjdk version "1.8.0_242"***
-    - ***OpenJDK Runtime Environment (build 1.8.0_242-8u242-b08-0ubuntu3~16.04-b08)***
-    - ***OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)***
+    - Netbens 8.1
+    - MySQL Connector Java 5.1.38
+    - Mysql  Ver 14.14 Distrib 5.7.27
+    - Openjdk version "1.8.0_242"
+    - OpenJDK Runtime Environment (build 1.8.0_242-8u242-b08-0ubuntu3~16.04-b08)
+    - OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 
 
 ![Netbens](netbens.png)
